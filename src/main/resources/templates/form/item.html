@@ -42,14 +42,24 @@
 
     <hr class="my-4">
 
+    <div>판매 여부</div>
+    <div>
+        <input type="checkbox" id="open" th:field="${item.open}" class="form-check-input" disabled>
+        <label for="open" class="form-check-label">판매 오픈</label>
+    </div>
+
     <div class="row">
         <div class="col">
             <button class="w-100 btn btn-primary btn-lg"
-                    onclick="location.href='editForm.html'" th:onclick="|location.href='@{/form/items/{itemId}/edit(itemId=${item.id})}'|" type="button">상품 수정</button>
+                    onclick="location.href='editForm.html'"
+                    th:onclick="|location.href='@{/form/items/{itemId}/edit(itemId=${item.id})}'|" type="button">상품 수정
+            </button>
         </div>
         <div class="col">
             <button class="w-100 btn btn-secondary btn-lg"
-                    onclick="location.href='items.html'" th:onclick="|location.href='@{/form/items}'|" type="button">목록으로</button>
+                    onclick="location.href='items.html'" th:onclick="|location.href='@{/form/items}'|" type="button">
+                목록으로
+            </button>
         </div>
     </div>
 
